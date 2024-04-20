@@ -28,19 +28,10 @@ function AnimeCard({ anime }: Prop) {
           className="rounded-xl"
         />
       </div>
+     
       <div className="py-4 flex flex-col gap-3">
-        <div className="flex justify-between items-center gap-1">
-          <h2 className="font-bold text-white text-xl line-clamp-1 w-full">
-            {anime.name}
-          </h2>
-          <div className="py-1 px-2 bg-[#161921] rounded-sm">
-            <p className="text-white text-sm font-bold capitalize">
-              {anime.kind}
-            </p>
-          </div>
-        </div>
-        <div className="flex gap-4 items-center">
-          <div className="flex flex-row gap-2 items-center">
+        <div className="flex justify-between items-center gap-1 bg-[#161921] px-2">
+        <div className="flex flex-row gap-2 items-center">
             <Image
               src="./episodes.svg"
               alt="episodes"
@@ -62,6 +53,19 @@ function AnimeCard({ anime }: Prop) {
             />
             <p className="text-base font-bold text-[#FFAD49]">{anime.score}</p>
           </div>
+        
+          <div className="py-1 px-2">
+            <p className="text-white text-sm font-bold capitalize">
+              {anime.kind}
+            </p>
+          </div>
+        </div>
+        
+        
+        <div className="flex gap-4 items-center">
+        <h2 className="font-bold text-white text-xl line-clamp-1 w-full">
+            {anime.name}
+          </h2>
         </div>
       </div>
     </div>
